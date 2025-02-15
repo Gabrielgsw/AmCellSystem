@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class Estoque {
     public String nome;
     public ArrayList<Item> itens;
-    public Integer quantidade;
+    public int quantidade;
 
     public Estoque(String nome, ArrayList<Item> itens, Integer quantidade) {
         this.nome = nome;
