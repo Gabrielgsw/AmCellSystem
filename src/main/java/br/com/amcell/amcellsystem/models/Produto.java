@@ -1,15 +1,21 @@
 package br.com.amcell.amcellsystem.models;
 
+import java.io.Serializable;
 import java.util.Objects;
+import java.util.UUID;
 
-public abstract class Produto {
+public abstract class Produto implements Serializable {
 
+
+
+    private final UUID produtctId;
     private String nome;
     private Double precoVenda;
     private String descricao;
 
 
     public Produto(String nome, Double precoVenda, String descricao) {
+        this.produtctId = UUID.randomUUID();
         this.nome = nome;
         this.precoVenda = precoVenda;
         this.descricao = descricao;
@@ -37,6 +43,10 @@ public abstract class Produto {
 
     public void setPrecoVenda(Double precoVenda) {
         this.precoVenda = precoVenda;
+    }
+
+    public UUID getProdutctId() {
+        return produtctId;
     }
 
     @Override

@@ -1,10 +1,13 @@
 package br.com.amcell.amcellsystem.models;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
+import java.util.UUID;
 
-public class Item extends Produto {
+public class Item extends Produto implements Serializable {
 
+    //private final UUID itemId;
     private String marca;
     private Double precoCompra;
     private LocalDate dataCompra;
