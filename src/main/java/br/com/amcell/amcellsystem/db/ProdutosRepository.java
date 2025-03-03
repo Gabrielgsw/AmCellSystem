@@ -29,7 +29,10 @@ public class ProdutosRepository implements IRepository<Produto>{
 
     @Override
     public List<Produto> listarTudo() {
-        return produtos;
+        if(!produtos.isEmpty()){
+            return produtos;
+        }
+        return null;
     }
 
     //public List<Produto>
